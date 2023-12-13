@@ -11,7 +11,7 @@ function useProducts(){
   return {getAPI};
 }
 
-function useCategory({getAPI}){
+function useSearch({getAPI}){
   const [ products , setProducts ] = useState();
   function refreshProducts(category){
     let result = getAPI;
@@ -26,9 +26,21 @@ function useCategory({getAPI}){
   return { products , refreshProducts}
 }
 
+function useCategories({getAPI}){
+  const [ categories , setCategories] = useState();
+  useEffect(()=>{
+    if (!getAPI) return ;
+    let resultCategories = [... new Set(getAPI.map(product => product.category))]
+    setCategories(resultCategories)
+  },[getAPI]);
+  return { categories }
+}
+
 function App() {
   const { getAPI } = useProducts();
-  const { products , refreshProducts } = useCategory({getAPI})
+  const { products , refreshProducts } = useSearch({getAPI})
+  const { categories } = useCategories({getAPI})
+  
   
   
   function handleButton(category){
@@ -42,8 +54,11 @@ function App() {
           {product.title}
         </div>)
       }
-      <button onClick={() => handleButton(`men's clothing`)}>MEN</button>
-      <button onClick={() => handleButton(`women's clothing`)}>WOMEN</button>
+      {categories && categories.map((category , index) =>
+        <div key={`${category}-${index}`}>
+          <button onClick={() => handleButton(category)}>{category}</button>
+        </div>)
+      }
       <button onClick={() => handleButton()}>All</button>
     </>
   )
