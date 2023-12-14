@@ -1,6 +1,8 @@
 import { useProducts } from './hooks/useProducts';
 import { useSearch } from './hooks/useSearch';
 import { useCategories } from './hooks/useCategories';
+import Navbar from './components/navbar';
+import Filters from './components/filters';
 import './App.css'
 
 function App() {
@@ -14,17 +16,20 @@ function App() {
 
   return (
     <>
-      {products && products.map(product => 
-        <div key={product.id}>
-          {product.title}
-        </div>)
-      }
-      {categories && categories.map((category , index) =>
-        <div key={`${category}-${index}`}>
-          <button onClick={() => handleButton(category)}>{category}</button>
-        </div>)
-      }
-      <button onClick={() => handleButton()}>All</button>
+      <Navbar/>
+      <div className='container'>
+        <div className='products'>
+          {products && products.map(product => 
+            <div key={product.id} className='product'>
+              {product.rating.rate}
+              <img src={product.image} alt="" />
+              {product.title}
+              ${product.price}
+            </div>)
+          }
+        </div>
+        <Filters categories={categories} handleButton={handleButton}/>
+      </div>
     </>
   )
 }
