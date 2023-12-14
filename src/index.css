@@ -20,9 +20,14 @@ body {
   width: 90%;
 }
 
-h1{
+h1,h2{
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+}
+
+h2{
+  text-align: center;
+  font-size: 3rem;
 }

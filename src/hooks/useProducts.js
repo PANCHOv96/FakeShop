@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 export function useProducts(){
     const [getAPI,setGetApi] = useState();
+
     useEffect(()=>{
       fetch('https://fakestoreapi.com/products')
               .then(res=>res.json())

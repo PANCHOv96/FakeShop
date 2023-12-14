@@ -11,12 +11,12 @@ export default function Filters({categories,handleButton}){
             <h3>Categories</h3>
             {categories && categories.map((category , index) =>
               <div key={`${category}-${index}`}>
-                <input type="radio" onClick={() => handleButton(category)} id={category} name="drone" />
+                <input type="radio" onClick={() => handleButton({category:category,title:`${category}`})} id={category} name="drone" />
                 <label htmlFor={category}>{category}</label>
               </div>)
             }
             <div>
-              <input type="radio" onClick={() => handleButton()} id='all' name="drone"  defaultChecked/>
+              <input type="radio" onClick={() => handleButton({})} id='all' name="drone"  defaultChecked/>
               <label htmlFor="all">all</label>
             </div>
           </div>
