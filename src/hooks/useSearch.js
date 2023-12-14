@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 export function useSearch({getAPI}){
     const [ products , setProducts ] = useState();
     function refreshProducts(category){
