@@ -13,8 +13,8 @@ function App() {
   const { categories } = useCategories({getAPI})
   const [ title,setTitle] = useState('All')
     
-  function handleButton({category,title='All',cart}){
-    refreshProducts({category,cart})
+  function handleButton({category,title='All',cart,minPrice,maxPrice}){
+    refreshProducts({category,cart,minPrice,maxPrice})
     setTitle(title.charAt(0).toUpperCase() + title.slice(1));
   }
 
