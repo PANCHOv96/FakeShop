@@ -4,6 +4,7 @@ import { useCategories } from './hooks/useCategories';
 import Navbar from './components/navbar';
 import Filters from './components/filters';
 import Products from './components/products';
+import Footer from './components/Footer/footer'
 import './App.css'
 import { useState } from 'react';
 
@@ -26,6 +27,7 @@ function App() {
         <Products products={products} listCart={listCart} cartShop={cartShop}/>
         <Filters categories={categories} handleButton={handleButton}/> 
       </div>
+      <Footer/>
     </>
   )
 }

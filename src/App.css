@@ -109,5 +109,43 @@
     cursor: pointer;
     padding: 0.2rem 0.6rem;
 }
-
+/* FOOTER */
+.Footer{
+    margin: 0 auto;
+}
+.Footer h3{
+    color: #383634;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+.footer-social{
+    text-align: center;
+    margin: 1rem auto;
+}
+.icons-redes{
+    width: 3rem;
+}
+.designer-developer{
+    font-style: normal;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    gap: 10px;
+}
+.designer-developer h3{
+    margin: 0 auto;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+.flex-footer{
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+}
 
