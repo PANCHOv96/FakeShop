@@ -1,6 +1,14 @@
 # FakeShop
 
-aplicacion creada en react, utiliza la api https://rickandmortyapi.com/ para la obtencion de datos de la serie . el objetivo es poder traer los datos de todos los personajes de la serie a traves del buscador principal , con esta aplicacion se aprendio el funcionamiento interno del useCallback para impedir que se genere la misma funcion por el renderizado , useRef para tener referencia al dato anterior antes del renderizado para comprobar si el input esta vacio o no y se implemento una funcion debounce que conciste en esperar que el usuario termine de teclear para poder hacer la busqueda a la api .
+aplicacion creada en react, utiliza la api https://fakestoreapi.com/products para la obtencion de datos.
+la idea es recrear el funcionamiento de un ecommerce de la mejor manera.
+
+## Roadmap
+
+- utilizar TailwindCSS.
+- useCallback para evitar la creacion de la misma funcion por cada renderizado.
+- useReducer para poder tener un estado global.
+- LocalStorage para que los datos del carrito persistan al refrescar la web.
 
 ## Características Aprendidas
 
@@ -9,9 +17,7 @@ aplicacion creada en react, utiliza la api https://rickandmortyapi.com/ para la 
 
 ## Screenshots
 
-![App Screenshot](https://github.com/PANCHOv96/RickAndMorty/blob/main/src/assets/RickAndMorty.png)
-![App Screenshot](https://github.com/PANCHOv96/RickAndMorty/blob/main/src/assets/RickAndMorty2.png)
-![App Screenshot](https://github.com/PANCHOv96/RickAndMorty/blob/main/src/assets/RickAndMorty3.png)
+![App Screenshot](https://github.com/PANCHOv96/FakeShop/blob/main/src/assets/FakeShop.png)
 
 ## Instalación
 
