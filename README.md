@@ -9,9 +9,7 @@ aplicacion creada en react, utiliza la api https://rickandmortyapi.com/ para la 
 
 ## Screenshots
 
-![App Screenshot](https://github.com/PANCHOv96/RickAndMorty/blob/main/src/assets/RickAndMorty.png)
-![App Screenshot](https://github.com/PANCHOv96/RickAndMorty/blob/main/src/assets/RickAndMorty2.png)
-![App Screenshot](https://github.com/PANCHOv96/RickAndMorty/blob/main/src/assets/RickAndMorty3.png)
+![App Screenshot](https://github.com/PANCHOv96/FakeShop/blob/main/src/assets/FakeShop.png)
 
 ## Instalación
 
