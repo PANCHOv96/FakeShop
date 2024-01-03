@@ -2,6 +2,7 @@
 
 aplicacion creada en react, utiliza la api https://fakestoreapi.com/products para la obtencion de datos.
 la idea es recrear el funcionamiento de un ecommerce de la mejor manera.
+actualice el comportamiento de la app , si bien es lo mismo no se aprecian cambios visuales a nivel logica esta mucho mas ordenado, se implementaron estados globales que solamente tienen los componentes necesarios y no toda la web.
 
 ## Roadmap
 
