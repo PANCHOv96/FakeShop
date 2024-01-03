@@ -6,9 +6,10 @@ la idea es recrear el funcionamiento de un ecommerce de la mejor manera.
 ## Roadmap
 
 - utilizar TailwindCSS.
-- useCallback para evitar la creacion de la misma funcion por cada renderizado.
-- useReducer para poder tener un estado global.
-- LocalStorage para que los datos del carrito persistan al refrescar la web.
+- useCallback para evitar la creacion de la misma funcion por cada renderizado. ✅
+- useContext para poder tener un estado global. ✅
+- useReducer optimizar mejor el estado global, separando la logica. ✅
+- LocalStorage para que los datos del carrito persistan al refrescar la web. ✅
 
 ## Características Aprendidas
 
