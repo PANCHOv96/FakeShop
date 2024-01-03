@@ -29,7 +29,7 @@ export function cartReducer(state,action){
             return newCart
         }
         case 'REMOVE':{
-            let newCart = state.filter(item => item.product.id != action.product.id)
+            let newCart = state.filter(item => item.product.id != action.id)
             updateLocalStorage(newCart)
             return newCart;
         }

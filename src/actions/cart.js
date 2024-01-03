@@ -7,8 +7,8 @@ export function useCartReducer(){
     function addToCart(product){
         dispatch({actionType: 'ADD',product})
     }
-    function removeToCart(product){
-        dispatch({actionType: 'REMOVE',product})
+    function removeToCart(id){
+        dispatch({actionType: 'REMOVE',id})
     }
     function clearCart(){
         dispatch({actionType: 'CLEAR'})
