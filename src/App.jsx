@@ -7,26 +7,28 @@ import Products from './components/products';
 import Footer from './components/Footer/footer'
 import './App.css'
 import { useState } from 'react';
+import { CartProvider } from './context/cart';
+import { ProductsProvider } from './context/products';
 
 function App() {
-  const { getAPI } = useProducts();
-  const { products , refreshProducts , listCart , cartShop} = useSearch({getAPI})
-  const { categories } = useCategories({getAPI})
   const [ title,setTitle] = useState('All')
     
-  function handleButton({category,title='All',cart,minPrice=0,maxPrice=1000}){
-    refreshProducts({category,cart,minPrice,maxPrice})
+  function handleButton({title='All'}){
     setTitle(title.charAt(0).toUpperCase() + title.slice(1));
   }
 
   return (
     <>
-      <Navbar ProductsOnCart={cartShop && cartShop.length} handleButton={handleButton}/>
-      <h2>{title && title}</h2>
-      <div className='container'>
-        <Products products={products} listCart={listCart} cartShop={cartShop}/>
-        <Filters categories={categories} handleButton={handleButton}/> 
-      </div>
+      <CartProvider>
+        <Navbar/>
+        <h2>{title && title}</h2>
+        <div className='container'>
+          <ProductsProvider>
+            <Products/>
+            <Filters handleButton={handleButton}/> 
+          </ProductsProvider>   
+        </div>
+      </CartProvider>
       <Footer/>
     </>
   )
