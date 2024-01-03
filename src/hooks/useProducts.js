@@ -8,5 +8,6 @@ export function useProducts(){
               .then(res=>res.json())
               .then(json=> setGetApi(json))
     }, []);
+    
     return {getAPI};
   }
